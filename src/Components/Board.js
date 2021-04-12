@@ -7,6 +7,7 @@ const Board = (props) => {
       <Square
         value={props.squares[value]}
         index={value}
+        player={props.player}
         handleClick={props.handleClick}
       />
     );
