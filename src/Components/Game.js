@@ -6,15 +6,16 @@ const Game = () => {
   const [player, setPlayer] = useState(true);
   const handleClick = (num) => {
     let squarelist = [...squares];
-
-    if (player === true) {
-      squarelist[num] = "X";
-      setPlayer(false);
-      setSquares(squarelist);
-    } else {
-      squarelist[num] = "O";
-      setPlayer(true);
-      setSquares(squarelist);
+    if (squarelist[num] === null) {
+      if (player === true) {
+        squarelist[num] = "X";
+        setPlayer(false);
+        setSquares(squarelist);
+      } else {
+        squarelist[num] = "O";
+        setPlayer(true);
+        setSquares(squarelist);
+      }
     }
   };
 
